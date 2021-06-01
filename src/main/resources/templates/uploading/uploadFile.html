@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload data from file</title>
+</head>
+<body>
+<h1>Upload data </h1>
+<form action="#" th:action="@{/upload_file}" method="post">
+  <p>File name: <input type="text" th:value="${path}" name="path"/> </p>
+  <p><input type="submit" value="Upload" /> </p>
+  <a href="/menu">Menu</a>
+</form>
+</body>
+</html>

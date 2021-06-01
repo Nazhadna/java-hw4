@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User is founded</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>User is founded</h1>
+<p th:text="'Surname: ' + ${user.surname}"/>
+<p th:text="'Name: ' + ${user.name}"/>
+<p th:text="'Patronymic: ' + ${user.patronymic}" />
+<p th:text="'Age: ' + ${user.age}"/>
+<p th:text="'Salary: ' + ${user.salary}"/>
+<p th:text="'E-mail: ' + ${user.email}"/>
+<a href="/send">Send E-mail to this user</a> <p/>
+<p th:text="'Job: ' + ${user.job}"/>
+<p th:text="'User-agent: ' + ${userAgent}"/>
+<p th:text="'Time: ' + ${time}"/>
+<a href="/user_search">Find another user</a> <p/>
+<a href="/menu">Menu</a>
+
+</body>
+</html>

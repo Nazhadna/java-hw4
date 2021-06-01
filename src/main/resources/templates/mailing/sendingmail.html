@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Write message</title>
+</head>
+<body>
+<h1>Send e-mail</h1>
+  <p th:text="'Surname: ' + ${user.surname}"/>
+  <p th:text="'Name: ' + ${user.name}"/>
+  <p th:text="'E-mail: ' + ${user.email}"/>
+<form action="#" th:action="@{/send}" method="post">
+  <p>Message: <input type="text" th:value="${message}" name="message" /> </p>
+  <p><input type="submit" value="Send" /> </p>
+  <a href="/menu">Menu</a>
+</form>
+</body>
+</html>
