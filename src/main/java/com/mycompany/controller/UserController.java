@@ -47,20 +47,20 @@ public class UserController {
     }
 
     @GetMapping(value = "/send")
-    public String s(Model model) {
+    public String sendMessage(Model model) {
         model.addAttribute("message","Hello!");
         model.addAttribute("user", currentUser);
         return "mailing/sendingmail";
     }
 
     @PostMapping(value = "/send")
-    public String kk(@RequestParam(value = "message") String message) {
+    public String sendMessage(@RequestParam(value = "message") String message) {
         try {
             sendingEmailApplication.sendEmail(currentUser.getEmail(), message);
         } catch (MailException e) {
             return "redirect:wrong_email";
         }
-        return "menu";
+        return "mailing/mailsent";
     }
 
     @GetMapping("/user_not_found")
