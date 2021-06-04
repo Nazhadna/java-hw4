@@ -2,3 +2,4 @@ User: surname= Skulkina, name= Nadezhda, patronymic= Sergeevna, age= 22, salary=
 User: surname= Sorokin, name= Petr, patronymic= Pavlovich, age= 34, salary= 300.0, email= , job= teacher
 User: surname= Stepanova, name= Anna, patronymic= Sergeevna, age= 55, salary= 3400.0, email= , job= architect
 User: surname= Sidorov, name= Ivan, patronymic= Andreevich, age= 15, salary= 100.0, email= , job= unemployed
+

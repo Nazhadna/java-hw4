@@ -1,6 +1,7 @@
 package com.mycompany.controller;
 
 import com.mycompany.model.User;
+import com.mycompany.service.UserFileWriter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,8 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
-import java.io.FileWriter;
-import java.io.IOException;
 
 @Controller
 public class AddingController {
@@ -32,12 +31,8 @@ public class AddingController {
         if (bindingResult.hasErrors())
             return "adding/userform";
 
-        try(FileWriter writer = new FileWriter("userlist.txt", true))
-        {
-            writer.write(user.toString()+'\n');
-        } catch (IOException e) {
-            System.out.println("IOException");
-        }
+        UserFileWriter fileWriter = new UserFileWriter();
+        fileWriter.writeToFile(user);
         return "adding/addingResult";
     }
 
